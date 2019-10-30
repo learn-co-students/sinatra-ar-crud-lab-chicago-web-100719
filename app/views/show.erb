@@ -1,0 +1,17 @@
+<h1>Here is Your Article!</h1>
+
+<h3>Title: <%= @article["title"] %></h3>
+<p><%= @article["content"] %></p>
+<br>
+<br>
+<br>
+<a href="/articles/<%= @article["id"] %>/edit">Edit Article</a>
+<br>
+<br>
+<br>
+<form action="/articles/<%= @article['id'] %>/delete" method="POST">
+  <input type="hidden" value="delete" name="_method">
+  <input type="submit" value="Delete">
+</form>
+<br>
+<a href="/articles">Home</a>
